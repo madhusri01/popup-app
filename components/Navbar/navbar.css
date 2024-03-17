@@ -1,0 +1,10 @@
+.navbar-item {
+  color: black !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+.navbar {
+  border-bottom: 2px solid black;
+}

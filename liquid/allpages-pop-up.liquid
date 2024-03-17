@@ -1,0 +1,130 @@
+{% if template %}
+<!DOCTYPE html>
+      <html>
+      <title>Web Page Design</title>
+      <script src="https://code.jquery.com/jquery-1.9.1.js" ></script>
+      <style type="text/css">
+
+
+      .popup-onload{
+      width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.5);
+      margin: 0 auto;
+      display: none;
+      position: fixed;
+      z-index: 101;
+      }
+      .cnt223{
+      position: relative;
+          height: $height;
+          width: $width;
+         background-image:url('https://ik.imagekit.io/arokee123$bgImage');
+         background-color: $bgColor;
+         background-size: 100% 100%;
+         background-repeat: no-repeat;
+           margin: 100px auto;
+           text-align: center;
+      }
+        
+        .cnt223 .title h1{
+          color:$titleColor;
+          font-size:$titleSize;
+          font-weight:$titleWeight;
+           text-align: center;
+        }
+
+ .cnt223 .text{
+          color:$messageColor;
+          font-size:$messageSize;
+          font-weight:$messageWeight;
+          position: relative;
+           text-align:"center";
+          transform: none;
+          word-wrap: break-word;
+          transition: 50% 50%;
+      }
+        .cnt223 .image{
+         
+            margin: 0 auto;
+        }
+          
+     
+   
+      .popup-timer{
+          width: auto;
+          height: 25px;
+          color: #fff;
+          position: absolute;
+          right: 10px;
+          line-height: 25px;
+          padding: 0px 10px;
+        }
+        .close{
+          background-color: #fff;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          line-height: 22px;
+          position: absolute;
+          right: -10px;
+          top: -10px;
+          cursor: pointer;
+          transition: all 0.5s ease;
+          border-radius: 50%;
+        }
+        .close:hover{
+          transform: rotate(360deg);
+        }
+        
+        .cnt223 p{
+        clear: both;
+            color: #555555;
+             text-align: justify; 
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+           .imgage img{
+        margin: 0 auto!important;
+        float: none;
+        display: block;
+      }
+        </style>
+        <script>
+          $(document).ready(function(){
+
+            $(window).load(function(){
+              $(".popup-onload").fadeIn(1500);
+
+              $(".cnt223 .close").on("click",function(){
+                $(".popup-onload").fadeOut(500);
+              });
+                  $(".popup-onload").on("click",function(){
+                $(".popup-onload").fadeOut(300);
+              });
+            });
+          });
+        </script>
+
+       
+
+        <body>
+        <div class="popup-onload">
+        <div class="cnt223">
+          
+
+              <div class="close">x</div>
+          
+          <div class="title"><h1>$title</h1></div>
+          <div class="image">
+            <img src="https://ik.imagekit.io/arokee123/tr:h-$imageHeight,w-$imageWidth$image" alt="">
+          </div>
+          <div class="text">$message</div>
+         
+        </div>
+        </div>
+        </body>
+        </html>
+
+{% endif %}
